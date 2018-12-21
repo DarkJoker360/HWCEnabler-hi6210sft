@@ -1,0 +1,9 @@
+id=HWCEnabler-hi6210sft
+name=HWCEnabler-hi6210sft
+version=v1.0
+versionCode=10
+author=SimoneEsposito(DarkJoker360)
+description=This module can add and enable HardwareComposer libs for Huawei hi6210sft devices running Nougat based custom roms. 
+support=
+minMagisk=17000
+donate=https://www.paypal.me/Martiriggiano
