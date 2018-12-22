@@ -5,7 +5,7 @@
 # 
 ##########################################################################################
 ##########################################################################################
-# 
+B# 
 # Instructions:
 # 
 # 1. Place your files into system folder (delete the placeholder file)
@@ -100,3 +100,18 @@ set_permissions() {
 # difficult for you to migrate your modules to newer template versions.
 # Make update-binary as clean as possible, try to only do function calls in it.
 
+# Device check
+device_check() {
+  if [ "$(grep_prop ro.product.device)" == "$1" ] || [ "$(grep_prop ro.build.product)" == "$1" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+if ! device_check "hi6210sft" && ! device_check "alice" && ! device_check"cherryplus"; then
+  ui_print "This module is only for Huawei hi6210sft devices (Huawei P8 Lite/Honor 4C etc.)! Aborting!"
+  $BOOTMODE || recovery_cleanup
+  rm -rf $TMPDIR
+  exit 1
+fi
