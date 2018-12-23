@@ -4,6 +4,6 @@ version=v1.0
 versionCode=10
 author=SimoneEsposito(DarkJoker360)
 description=This module can add and enable HardwareComposer libs for Huawei hi6210sft devices running Marshmallow or Nougat custom roms. 
-support=
+support=https://forum.xda-developers.com/p8lite/general/magisk-module-hwcenabler-hi6210sft-t3882121
 minMagisk=17000
 donate=https://www.paypal.me/Martiriggiano
