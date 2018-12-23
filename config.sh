@@ -109,7 +109,7 @@ device_check() {
   fi
 }
 
-if ! device_check "hi6210sft" && ! device_check "alice" && ! device_check"cherryplus"; then
-  ui_print "This module is only for Huawei hi6210sft devices (Huawei P8 Lite/Honor 4C etc.)! Aborting!"
+if ! device_check "hi6210sft" && ! device_check "alice" && ! device_check "cherryplus"; then
+  abort "This module is only for Huawei hi6210sft devices (Huawei P8 Lite/Honor 4C etc.)! Aborting!"
   exit 1
 fi
